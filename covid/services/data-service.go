@@ -20,7 +20,7 @@ func NewDataService() *DataService {
 
 func (d *DataService) DoSomeThing(c *gin.Context) {
 	c.JSON(200, gin.H{
-		"message" : "Hello world",
+		"message" : "helo world",
 	})
 }
 
