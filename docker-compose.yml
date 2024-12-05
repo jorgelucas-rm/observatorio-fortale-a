@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  covid:
+    build:
+      context: ./covid
+    ports:
+      - "8080:8080"
+    container_name: covid-api
+    networks:
+      - observatorio-network
+
+#  dengue:
+#    build:
+#      context: ./dengue
+#    ports:
+#      - "5000:5000"
+#    container_name: dengue-api
+#    networks:
+#      - observatorio-network
+
+networks:
+  observatorio-network:
+    driver: bridge
