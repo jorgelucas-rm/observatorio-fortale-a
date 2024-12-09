@@ -1,4 +1,3 @@
-version: "3.9"
 services:
   covid-back:
     build:
@@ -18,14 +17,23 @@ services:
     networks:
       - observatorio-network
 
-#  dengue:
-#    build:
-#      context: ./dengue
-#    ports:
-#      - "5000:5000"
-#    container_name: dengue-api
-#    networks:
-#      - observatorio-network
+  dengue:
+    build:
+      context: ./dengue
+    ports:
+      - "8081:8081"
+    container_name: dengue-api
+    networks:
+      - observatorio-network
+
+  dengue-front:
+    build:
+      context: ./denguefront
+    ports:
+      - "5174:80"
+    container_name: dengue-front
+    networks:
+     - observatorio-network
 
 networks:
   observatorio-network:
