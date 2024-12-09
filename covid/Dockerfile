@@ -1,4 +1,3 @@
-# Etapa 1: Build
 FROM golang:1.23 AS builder
 
 WORKDIR /app
@@ -9,10 +8,8 @@ COPY . .
 
 RUN go build -o main .
 
-# Etapa 2: Runtime
 FROM debian:bookworm-slim
 
-# Adicionando e atualizando certificados CA ao container
 RUN apt-get update && apt-get install -y ca-certificates && \
     apt-get clean && \
     update-ca-certificates
