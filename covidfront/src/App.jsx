@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <div className="flex flex-col items-center gap-10 bg-slate-800 text-white h-screen ">
+      <div className="flex flex-col items-center gap-10 text-white h-screen ">
         <header className="flex flex-col items-center">
           <h1 className="text-4xl uppercase font-bold mt-10 flex justify-center items-center gap-2">Como estava a Covid <img src={covid} alt="" className="w-14"/> há 3 anos atrás?</h1>
         </header>
