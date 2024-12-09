@@ -26,14 +26,14 @@ services:
     networks:
       - observatorio-network
 
-#  dengue-front:
-#    build:
-#      context: ./denguefront
-#    ports:
-#      - "5174:81"
-#    container_name: dengue-front
-#    networks:
-#     - observatorio-network
+  dengue-front:
+    build:
+      context: ./denguefront
+    ports:
+      - "5174:80"
+    container_name: dengue-front
+    networks:
+     - observatorio-network
 
 networks:
   observatorio-network:
