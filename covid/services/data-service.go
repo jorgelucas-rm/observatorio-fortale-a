@@ -59,12 +59,12 @@ func (d *DataService) LastWeek(c *gin.Context) {
 
         for _, state := range apiResponse.Data {
             if state.Uf == "CE" {
-                cearaReturnData = append(cearaReturnData, models.StateReturnData{
+                cearaReturnData = append([]models.StateReturnData{{
                     Cases:    state.Cases,
                     Deaths:   state.Deaths,
                     Suspects: state.Suspects,
                     Refuses:  state.Refuses,
-                })
+                }}, cearaReturnData...)
                 break
             }
         }
@@ -110,12 +110,12 @@ func (d *DataService) LastMonth(c *gin.Context) {
 
         for _, state := range apiResponse.Data {
             if state.Uf == "CE" {
-                cearaReturnData = append(cearaReturnData, models.StateReturnData{
+                cearaReturnData = append([]models.StateReturnData{{
                     Cases:    state.Cases,
                     Deaths:   state.Deaths,
                     Suspects: state.Suspects,
                     Refuses:  state.Refuses,
-                })
+                }}, cearaReturnData...)
                 break
             }
         }
@@ -161,12 +161,12 @@ func (d *DataService) LastYear(c *gin.Context) {
 
         for _, state := range apiResponse.Data {
             if state.Uf == "CE" {
-                cearaReturnData = append(cearaReturnData, models.StateReturnData{
+                cearaReturnData = append([]models.StateReturnData{{
                     Cases:    state.Cases,
                     Deaths:   state.Deaths,
                     Suspects: state.Suspects,
                     Refuses:  state.Refuses,
-                })
+                }}, cearaReturnData...)
                 break
             }
         }
